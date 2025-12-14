@@ -22,7 +22,45 @@ A ideia é tipo um "Tinder de festas" mas com mapa e geolocalização. Funciona 
 - **Leaflet** - Mapas (OpenStreetMap)
 - **Firebase Auth** - Autenticação (preparado, mas ainda não integrado)
 
+
 ## O que tem no projeto
+
+## 📸 Screenshots
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="docs/screenshots/home.png" width="400"/>
+        <br><strong>Mapa de Eventos</strong>
+      </td>
+      <td align="center">
+        <img src="docs/screenshots/cad_festa.png" width="400"/>
+        <br><strong>Cadastro de Festas</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="docs/screenshots/dash_org.png" width="400"/>
+        <br><strong>Dashboard do Organizador</strong>
+      </td>
+      <td align="center">
+        <img src="docs/screenshots/boost.png" width="400"/>
+        <br><strong>Sistema de Boost</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="docs/screenshots/carteira_plataforma.png" width="400"/>
+        <br><strong>Carteira da Plataforma</strong>
+      </td>
+      <td align="center">
+        <img src="docs/screenshots/users_cadastrados.png" width="400"/>
+        <br><strong>Gestão de Usuários</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ### Rotas principais
 
@@ -127,7 +165,12 @@ A arquitetura foi pensada pra facilitar migração futura pra React Native:
 - Os ícones do PWA precisam ser gerados pra produção
 - Tudo que é mockado precisa ser integrado com backend real
 
-## Contato
+## 📞 Contato
 
-Dúvidas ou sugestões: pdn.vac@gmail.com
-LinkedIn: lbjanssen
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/lbrj)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucasbrjn@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LBRJanssen)
+
+</div>
