@@ -1,11 +1,19 @@
-# Aonde Ta o Role
+<div align="center">
+  <img src="docs/screenshots/home.png" alt="Aonde Ta o Role" width="100%"/>
+  
+  # 🎉 Aonde Ta o Role
+  
+  **Plataforma completa para descobrir festas e eventos em tempo real**
+  
+  [![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+  [![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+  [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+  
+  [Demo](https://ondetaorole.vercel.app) • [Screenshots](#-screenshots) • [Instalação](#-instalação) • [Funcionalidades](#-funcionalidades)
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38bdf8)](https://tailwindcss.com/)
-
-Uma plataforma PWA para descobrir festas e eventos próximos usando geolocalização.
+</div>
 
 ## Sobre o Projeto
 
