@@ -1,0 +1,14 @@
+# Arquivos e pastas que não devem ser enviados para o Vercel
+
+node_modules
+.next
+.env*.local
+.env
+.vercel
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+
+

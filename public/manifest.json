@@ -1,0 +1,39 @@
+{
+  "name": "Aonde Ta o Role",
+  "short_name": "Role",
+  "description": "Descubra festas e eventos perto de voce em tempo real",
+  "start_url": "/home",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#ff00ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["entertainment", "social", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Ver Festas",
+      "short_name": "Festas",
+      "description": "Lista de festas proximas",
+      "url": "/festas",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Cadastrar Festa",
+      "short_name": "Cadastrar",
+      "description": "Criar novo evento",
+      "url": "/cadastro-festa",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
+
