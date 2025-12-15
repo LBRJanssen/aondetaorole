@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Layout from '@/components/Layout';
 import { useAuthStore } from '@/store/authStore';
 import { usePermissions } from '@/hooks/usePermissions';
+import { Permission } from '@/utils/permissions';
 import { Shield, Calendar, Users, Database, RefreshCw, LogOut, Crown, MessageSquare, Headphones, BarChart3, ChevronRight, Terminal, Wallet, DollarSign, TrendingUp } from 'lucide-react';
 import AdminEvents from '@/components/Admin/AdminEvents';
 import AdminUsers from '@/components/Admin/AdminUsers';
@@ -88,11 +89,11 @@ export default function AdminPage() {
       const permissions: Record<string, boolean> = {};
       
       for (const section of mainSections) {
-        permissions[section.id] = await checkPermission(section.permission);
+        permissions[section.id] = await checkPermission(section.permission as Permission);
       }
       
       for (const section of roleSections) {
-        permissions[section.id] = await checkPermission(section.permission);
+        permissions[section.id] = await checkPermission(section.permission as Permission);
       }
       
       setSectionPermissions(permissions);

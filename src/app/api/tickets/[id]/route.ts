@@ -9,10 +9,11 @@ const supabaseAdmin = createClient(
 // GET /api/tickets/[id] - Ver ticket específico
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const ticketId = params.id;
+    const { id } = await params;
+    const ticketId = id;
     console.log('🔧 [API Tickets] GET /', ticketId);
 
     // 1. Verificar autenticação
@@ -133,10 +134,11 @@ export async function GET(
 // PUT /api/tickets/[id] - Atualizar ticket (status, prioridade, atribuição)
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const ticketId = params.id;
+    const { id } = await params;
+    const ticketId = id;
     console.log('🔧 [API Tickets] PUT /', ticketId);
 
     // 1. Verificar autenticação

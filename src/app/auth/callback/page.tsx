@@ -40,6 +40,14 @@ export default function AuthCallbackPage() {
         // Verifica se há tokens válidos
         if (hash.includes('access_token') || hash.includes('type=recovery')) {
           try {
+            // Verifica se Supabase está configurado
+            if (!supabase) {
+              console.error('❌ [AuthCallback] Supabase não configurado');
+              setStatus('error');
+              setMessage('Serviço temporariamente indisponível');
+              return;
+            }
+
             // Supabase processa automaticamente o hash
             const { data, error } = await supabase.auth.getSession();
 

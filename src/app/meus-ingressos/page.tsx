@@ -18,11 +18,11 @@ export default function MeusIngressosPage() {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   // Filtra apenas transacoes de compra de ingressos
-  const ticketTransactions = transactions.filter((t) => t.type === 'purchase' && t.eventId);
+  const ticketTransactions = transactions.filter((t) => t.type === 'purchase' && t.referenceType === 'event' && t.referenceId);
 
   // Busca eventos relacionados aos ingressos
   const ticketsWithEvents = ticketTransactions.map((transaction) => {
-    const event = events.find((e) => e.id === transaction.eventId);
+    const event = events.find((e) => e.id === transaction.referenceId);
     return {
       transaction,
       event,

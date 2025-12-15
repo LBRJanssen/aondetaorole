@@ -9,10 +9,11 @@ const supabaseAdmin = createClient(
 // POST /api/tickets/[id]/messages - Enviar mensagem no ticket
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const ticketId = params.id;
+    const { id } = await params;
+    const ticketId = id;
     console.log('🔧 [API Tickets] POST /', ticketId, '/messages');
 
     // 1. Verificar autenticação

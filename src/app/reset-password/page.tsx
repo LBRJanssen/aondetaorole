@@ -47,6 +47,14 @@ function ResetPasswordContent() {
     // Processa o hash do Supabase (token vem no hash)
     const processHash = async () => {
       try {
+        // Verifica se Supabase está configurado
+        if (!supabase) {
+          console.error('❌ [Reset Password] Supabase não configurado');
+          setError('Serviço temporariamente indisponível');
+          setIsValidating(false);
+          return;
+        }
+
         // Listener para mudanças de autenticação
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
           console.log('🔐 [Reset Password] Auth state changed:', event, session ? 'Session exists' : 'No session');
@@ -164,6 +172,13 @@ function ResetPasswordContent() {
     setIsLoading(true);
 
     try {
+      // Verifica se Supabase está configurado
+      if (!supabase) {
+        setError('Serviço temporariamente indisponível');
+        setIsLoading(false);
+        return;
+      }
+
       // Atualiza a senha usando o Supabase Auth
       const { error: updateError } = await supabase.auth.updateUser({
         password: password,

@@ -1196,7 +1196,7 @@ export default function CadastroFestaPage() {
       const filePath = `event-covers/${fileName}`;
 
       // Faz upload para Supabase Storage
-      const { data: uploadData, error: uploadError } = await supabase.storage
+      const { data: uploadData, error: uploadError } = await supabase!.storage
         .from('event-images')
         .upload(filePath, file, {
           cacheControl: '3600',
@@ -1208,7 +1208,7 @@ export default function CadastroFestaPage() {
       }
 
       // Obtém URL pública da imagem
-      const { data: { publicUrl } } = supabase.storage
+      const { data: { publicUrl } } = supabase!.storage
         .from('event-images')
         .getPublicUrl(filePath);
 

@@ -432,13 +432,14 @@ function EventDashboardCard({
   
   // Calcula vendas por categoria
   const eventTransactions = transactions.filter(
-    (t) => t.type === 'purchase' && t.eventId === event.id
+    (t) => t.type === 'purchase' && t.referenceType === 'event' && t.referenceId === event.id
   );
   
   const salesByCategory = event.ticketCategories?.map((category) => {
-    const categorySales = eventTransactions.filter(
-      (t) => t.ticketCategoryId === category.id
-    );
+    // Nota: ticketCategoryId não está disponível nas transações do wallet
+    // Por enquanto, todas as vendas do evento são contabilizadas
+    // TODO: Adicionar ticketCategoryId à API wallet/history se necessário
+    const categorySales = eventTransactions; // Todas as transações do evento
     return {
       category,
       sold: categorySales.length,

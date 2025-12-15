@@ -30,6 +30,15 @@ export async function POST(request: NextRequest) {
     
     console.log('🔗 [ForgotPassword] Redirect URL:', redirectUrl);
 
+    // Verifica se Supabase está configurado
+    if (!supabase) {
+      console.error('❌ [ForgotPassword] Supabase não configurado');
+      return NextResponse.json(
+        { error: 'Serviço temporariamente indisponível' },
+        { status: 503 }
+      );
+    }
+
     // Envia email de redefinição de senha
     const { error } = await supabase.auth.resetPasswordForEmail(email.toLowerCase().trim(), {
       redirectTo: redirectUrl,
